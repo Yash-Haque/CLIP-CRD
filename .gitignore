@@ -1,0 +1,6 @@
+# Ignore Python Compilation files
+__pycache__/
+
+# Ignore folders
+./data/Captions/
+./data/images/
