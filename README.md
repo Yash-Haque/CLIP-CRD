@@ -64,5 +64,3 @@ This will process the dataset, generate CLIP embeddings, and store the outputs i
 - If you run into issues with missing dependencies, make sure you have PyTorch and OpenAI's CLIP installed.  
 - If `config.py` isn't found, ensure that the `sys.path` is correctly set to `..` i.e. the project directory.  
 - The scripts are designed to automatically create missing folders, so no need to manually create `outputs/`.  
-
-Let me know if you need any refinements!
