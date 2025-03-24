@@ -1,10 +1,13 @@
-Here’s a more natural and human-friendly version of your README:  
-
----
 
 # CLIP-CRD  
 
-This project processes the **OpenI dataset** using OpenAI's CLIP model to generate and store image embeddings. The goal is to extract meaningful visual representations from medical images, which can be used for downstream tasks like classification or retrieval.  
+**CLIP-CRD** is a tool designed to automate report diagnosis for chest radiographs. Here the CRD stands for "**Chest Radiography Diagnosis**". This project was developed during my internship at Systech Datasoft Limited with the goal of building a multi-modal model that would leverage CLIP model's semantic segmentation capability to generate detailed descriptions of X-ray images. By combining OpenAI's CLIP with GPT-2, and following the system designed by [CLIP_prefix_caption]([https://drive.google.com/file/d/1PyVsMYO8bhy8e_o1trA4xk7G08ywsOF3/view?usp=sharing](https://github.com/rmokady/CLIP_prefix_caption)) we were able to train a model with significantly improved prediction accuracy, achieving **54.98% test accuracy**, on Chest Radiography images outperforming the baseline CLIP model.  
+
+## Features  
+
+- **Multi-Modal Understanding** – Integrates both image and text data to generate meaningful and accurate radiology reports.  
+- **Deep Learning-Powered** – Leverages state-of-the-art models like CLIP and GPT-2 for improved diagnostic insights.  
+- **Performance Boost** – Delivers **54.98% test accuracy**, surpassing the vanilla CLIP model in prediction tasks.  
 
 ## Getting Started  
 
