@@ -1,0 +1,6 @@
+torch
+transformers
+tqdm
+scikit-image
+clip-by-openai
+pillow
