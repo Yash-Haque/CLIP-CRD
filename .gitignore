@@ -1,6 +1,9 @@
 # Ignore Python Compilation files
 __pycache__/
 
-# Ignore folders
+# Ignore Folders
 ./data/Captions/
 ./data/images/
+
+# Ignore Files
+./outputs/openi_RN50_train.pkl

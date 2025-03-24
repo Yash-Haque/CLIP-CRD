@@ -5,9 +5,14 @@ from PIL import Image
 import pickle
 import json
 import os
+import sys
 from tqdm import tqdm
 import argparse
 from typing import List
+
+# Adding parent directory to sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+from config import TRAIN_CAPTIONS, IMAGE_PATH
 
 def parse_Data(clip_model, preprocess, caption_path: str, image_path: str, device, out_path: str):
     # Loading Caption 
@@ -59,16 +64,13 @@ def main(clip_model_type: str):
 
     out_path = f"./outputs/openi_{clip_model_name}_train.pkl"
     
-    train_captions = f"./data/Captions/Train.jsonl"
-    test_captions = f"./data/Captions/Test.jsonl"
-    valid_captions = f"./data/Captions/Valid.jsonl"
+    train_captions = TRAIN_CAPTIONS
 
-    image_path = f"./data/images/"
+    # from ..config import TEST_CAPTIONS, VALID_CAPTIONS
+    # test_captions = TEST_CAPTIONS
+    # valid_captions = VALID_CAPTIONS
 
-    # train_captions = f"D:/WORKING/TRACKED-PROJECTS/GITHUB/MedCLIPCap/data/Captions/Train.jsonl"
-    # test_captions = f"D:/WORKING/TRACKED-PROJECTS/GITHUB/MedCLIPCap/data/Captions/Test.jsonl"
-    # valid_captions = f"D:/WORKING/TRACKED-PROJECTS/GITHUB/MedCLIPCap/data/Captions/Valid.jsonl"
-    # image_path = f"D:/WORKING/TRACKED-PROJECTS/GITHUB/MedCLIPCap/data/images/"
+    image_path = IMAGE_PATH
 
     
     all_embeddings, all_captions = parse_Data(
